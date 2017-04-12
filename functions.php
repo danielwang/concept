@@ -1,30 +1,41 @@
  <?php
+ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+ $lastSegment = basename(parse_url($url, PHP_URL_PATH));
+ $rootfolder = array("index", "index.php");
+ if (in_array($lastSegment, $rootfolder)) {
+ 	$resURL = '';
+ } else {
+ 	$resURL = '../';
+ }
+
+
 // Reset this to compile large nesting level of less
 ini_set('xdebug.max_nesting_level', 500);
-// remove old mockup css if it exists, every time refresh page
-// $cssfile = 'dist/css/mockup.css';
-// if (file_exists($cssfile)) {
-//  unlink($cssfile);
-// }
+//remove old mockup css if it exists, every time refresh page
+$cssfile = $resURL . 'dist/css/mockup.css';
+if (file_exists($cssfile)) {
+ unlink($cssfile);
+}
 
 //Compile less to output a css file
-// require "lessc.inc.php";
-// $less = new lessc;
-// $less->checkedCompile("build/less/mockup.less", "dist/css/mockup.css");
+$lesspath = $resURL . 'build/less/mockup.less';
+$csspath = $resURL . 'dist/css/mockup.css';
+require "lessc.inc.php";
+$less = new lessc;
+$less->checkedCompile($lesspath, $csspath);
 
 
-$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-$lastSegment = basename(parse_url($url, PHP_URL_PATH));
-$rootfolder = array("index", "index.php");
-if (in_array($lastSegment, $rootfolder)) {
-	$resURL = '';
-} else {
-	$resURL = '../';
-}
+
 
 
 // Display pages as links from a folder
 function listElementsAsOptions($type) {
+  $ext = "";
+  if ($_SERVER['SERVER_NAME'] == 'localhost') {
+   $ext = ".php";
+  } else {
+   $ext = '.html';
+  }
 	$files = array();
 	$handle = opendir($type . '/');
 	while (false !== ($file = readdir($handle))):
@@ -37,7 +48,9 @@ function listElementsAsOptions($type) {
 		$filename = preg_replace("/\.php$/i", "", $file);
 		$title = preg_replace("/\-/i", " ", $filename);
 		$title = ucwords($title);
-		echo '<li><a href="' . $type . '/' . $filename . '">' . $title . '</a></li>';
+    $filepath = $filename . $ext;
+  //  echo $filepath;
+	  echo '<li><a href="' . $type . '/' . $filepath . '">' . $title . '</a></li>';
 	endforeach;
 }
 

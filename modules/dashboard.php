@@ -1,4 +1,4 @@
-<?php include '../../base.php'?>
+<?php include '../base.php'?>
 <?php startblock('page')?>
 	<link href="../dist/css/dashboard.css" rel="stylesheet" type="text/css" />
 	<h2>Recruitment Dashboard</h2>
