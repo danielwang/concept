@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="css/datetimepicker.css" />
+<script src="js/moment.js"></script>
+<script src="js/datetimepicker.js"></script>
+
+<style>
+.timeslots{
+	position: relative;
+	background: #f0f0f0;
+}
+</style> 
+
+<script type="text/javascript">
+$(function() {
+	$('#starttime').datetimepicker({
+        sideBySide: true
+	});
+	$('#endtime').datetimepicker({
+        sideBySide: true
+	});
+});
+
+</script>
+
+<div class="timeslot" style="display:none">
+    <table class="table table-striped">
+        <tbody>
+        <tr>
+            <td><label><i class="fa fa-calendar-o"></i> Start Time </label>*
+            	<div class="input-group date" id="starttime">
+				    <input class="form-control" type="text"></input>
+				    <span class="input-group-addon">
+				      <i class="fa fa-calendar">
+				      </i>
+				    </span>
+				</div>
+			</td>
+            <td><label><i class="fa fa-calendar-o"></i> End Time </label>
+            	<div class="input-group date" id="endtime">
+				    <input class="form-control" type="text"></input>
+				    <span class="input-group-addon">
+				      <i class="fa fa-calendar">
+				      </i>
+				    </span>
+				</div>
+			</td>
+            <td><label><i class="fa fa-map-marker"></i> Venue (optional)</label>
+            	<div class="input-group">
+	            	<select><option>Select</option>
+	            		<option>Melbourne office</option>
+	            		<option>Sydney office</option>
+	            		<option>Singapore office</option>
+	            	</select>
+	            </div>
+	        </td>
+            <td><label>Position</label>*
+            	<div class="input-group"><input type="number" min="1" /></div>
+            </td>
+            <td>
+            	<i class="fa fa-times"></i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p><a href="#"> Add </a></p>
+</div>

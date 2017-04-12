@@ -1,0 +1,49 @@
+/* ==========================================================================
+   fontface
+   ========================================================================== */
+@font-face {
+    font-family: 'ProximaNovaLight';
+    src: url('fonts/proximanova-light/proximanova-light-webfont.eot');
+    src: url('fonts/proximanova-light/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-light/proximanova-light-webfont.woff') format('woff'),
+         url('fonts/proximanova-light/proximanova-light-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-light/proximanova-light-webfont.svg#ProximaNovaLtRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('fonts/proximanova-regular/proximanova-regular-webfont.eot');
+    src: url('fonts/proximanova-regular/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-regular/proximanova-regular-webfont.woff') format('woff'),
+         url('fonts/proximanova-regular/proximanova-regular-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-regular/proximanova-regular-webfont.svg#ProximaNovaRgRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url('fonts/proximanova-semibold/proximanova-semibold-webfont.eot');
+    src: url('fonts/proximanova-semibold/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-semibold/proximanova-semibold-webfont.woff') format('woff'),
+         url('fonts/proximanova-semibold/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-semibold/proximanova-semibold-webfont.svg#ProximaNovaLtBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ProximaNovaExtrabold';
+    src: url('fonts/proximanova-extrabold/ProximaNova-Extrabold.eot');
+    src: url('fonts/proximanova-extrabold/ProximaNova-Extrabold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-extrabold/ProximaNova-Extrabold.woff') format('woff'),
+         url('fonts/proximanova-extrabold/ProximaNova-Extrabold.ttf') format('truetype'),
+         url('fonts/proximanova-extrabold/ProximaNova-Extrabold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}	
