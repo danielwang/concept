@@ -1,6 +1,5 @@
 <?php include '../base.php'?>
 <?php startblock('page')?>
-	<link href="../dist/css/dashboard.css" rel="stylesheet" type="text/css" />
 	<h2>Recruitment Dashboard</h2>
 	<div class="row clearfix row-gap">
 		<div class="col-md-8 column">
@@ -237,8 +236,8 @@
 
 		</div>
 		<div class="col-md-4 column">
-	     	<?php include '../components/widgets/event.html';?>
-	     	<?php include '../components/widgets/task.html';?>
+	     	<?php //include '../../components/widgets/event.html';?>
+	     	<?php //include '../../components/widgets/task.html';?>
 		</div>
 	</div>
 <?php endblock()?>

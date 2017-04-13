@@ -1,18 +1,15 @@
 <?php include '../base.php';?>
 <?php startblock('page');?>
 <div class="row row-gap">
-	<div class="col-sm-3">
-	    <h2>Page title</h2>
-	</div>
-	<div class="col-sm-9 col-md-6">
+	<div class="col-sm-12">
 		<div class="alert alert-info">
 		  <strong>Info Message!</strong> Consequatur facere deleniti cumque <a class="alert-link" href="">link</a> ducimus maiores nemo.
-		  <button href="#" type="button" class="close"><i class="glyphicon glyphicon-remove"></i></button>
+		  <button href="#" type="button" class="close"><i class="fa fa-times-circle-o"></i></button>
 		</div>
 	</div>
 </div>
 <div class="pu-box">
-    <div class="pu-box-title">
+    <div class="pu-box-header">
         <h4>Table name</h4>
     </div>
     <div class="pu-box-content">
@@ -41,7 +38,7 @@
                                         <button type="button" class="btn btn-sm btn-info"> Go</button> </span></div>
             </div>
         </div>
-		<?php include '../_partials/_table.html';?>
+		<?php include '../components/_table.html';?>
 	</div>
 </div>
 

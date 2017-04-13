@@ -3067,11 +3067,11 @@ table.text-center th {
   position: absolute;
   top: -10px;
 }
-.pu-card .pu-card-header-figure img.featured {
+.pu-card .pu-card-figure img.featured {
   max-width: 100%;
   margin-bottom: 15px;
 }
-.pu-card .pu-card-header-figure + .pu-card-content {
+.pu-card .pu-card-figure + .pu-card-content {
   border-top: 0;
 }
 .pu-card .pu-card-content {

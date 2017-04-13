@@ -4,11 +4,11 @@
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
     	<div class="pu-box">
-            <div class="pu-box-title">
+            <div class="pu-box-header">
                 <h4>Simple form</h4>
             </div>
             <div class="pu-box-content">
-      			<?php include '../_partials/_form-horizontal.html';?>
+      			<?php include '../components/_form-horizontal.html';?>
       		</div>
       	</div>
     </div>

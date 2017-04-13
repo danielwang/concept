@@ -7,46 +7,64 @@
         <ul class="sidebar-menu">
             <li class="header">Modules</li>
             <li class="treeview">
-                <a href="#"><i class="pu-icon pu-icon-2x pu-icon-recruitment"></i> <span>Recruitment</span>
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
+                <a href="#">
+                    <i class="pu-icon pu-icon-2x pu-icon-recruitment"></i>
+                    <span>Recruitment</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
-                    <?php $folder = "{$resURL}modules";
+                    <?php $folder = "{$resURL}modules/recruitment";
               listElementsAsOptions($folder);?>
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class="pu-icon pu-icon-2x pu-icon-performance"></i> <span>Performance</span>
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
+                <a href="#">
+                    <i class="pu-icon pu-icon-2x pu-icon-performance"></i>
+                    <span>Performance</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
-                    <?php $folder = "{$resURL}modules";
+                    <?php $folder = "{$resURL}modules/performance";
                 listElementsAsOptions($folder);?>
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class="pu-icon pu-icon-2x pu-icon-learning"></i> <span>Learning</span>
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
+                <a href="#">
+                    <i class="pu-icon pu-icon-2x pu-icon-learning"></i>
+                    <span>Learning</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
-                    <?php $folder = "{$resURL}modules";
+                    <?php $folder = "{$resURL}modules/learning";
                   listElementsAsOptions($folder);?>
                 </ul>
             </li>
-            <li><a href="#"><i class="pu-icon pu-icon-2x pu-icon-analytics"></i> <span>Analytics</span></a></li>
-            <li><a href="modules/settings.php"><i class="pu-icon pu-icon-2x pu-icon-settings"></i> <span>Settings</span></a></li>
+            <li>
+                <a href="#">
+                    <i class="pu-icon pu-icon-2x pu-icon-analytics"></i>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo ($resURL)?>modules/settings.php">
+                    <i class="pu-icon pu-icon-2x pu-icon-settings"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
             <li class="header">Layouts</li>
             <li class="treeview">
-                <a href="#"><i class="fa fa-th-large fa-2x"></i> <span>Layouts</span>
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
+                <a href="#">
+                    <i class="fa fa-th-large fa-2x"></i>
+                    <span>Layouts</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <?php $folder = "{$resURL}layouts";
@@ -55,10 +73,11 @@
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-puzzle-piece fa-2x"></i> <span>Patterns</span>
+                    <i class="fa fa-puzzle-piece fa-2x"></i>
+                    <span>Patterns</span>
                     <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <?php $folder = "{$resURL}patterns";
@@ -66,7 +85,12 @@
                 </ul>
             </li>
             <li class="header">Random</li>
-            <li><a href="map"><i class="fa fa-2x fa-map-marker"></i><span>Map</span></a></li>
+            <li>
+                <a href="map">
+                    <i class="fa fa-2x fa-map-marker"></i>
+                    <span>Map</span>
+                </a>
+            </li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>
