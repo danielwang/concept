@@ -20,76 +20,45 @@
 
 
 /* read php files from folders */
-$folders = array("layouts", "modules", "patterns");
+//$folders = array("layouts", "modules", "patterns");
+$folders = array("modules");
 for ($i = 0; $i < count($folders); $i++) {
-	//readFolders($folders[$i]);
+  echo "<ul><li>";
   recurseDir($folders[$i]);
-  echo "<hr>";
+  echo "</li></ul>";
 }
 
-
-
-// function recurseDir($dir) {
-//   if(is_dir($dir)) {
-//     if($dh = opendir($dir)){
-//       while($file = readdir($dh)){
-//         if($file != '.' && $file != '..'){
-//           if(is_dir($file)){
-//             echo "<b>Subfolder</b>: $dir -> $file";
-//             echo "since it is a directory we recurse it.";
-//           //  recurseDir($dir . $file . '/');
-//           }else{
-//             echo "<b>Folder</b>: $dir -> $file";
-//             echo "<br/>";
-//           }
-//         }
-//       }
-//     }
-//     closedir($dh);
-//   }
-// }
 function recurseDir($folderpath) {
-	echo "<h3>reading $folderpath folder </h3>";
+	echo "<ul><li><b>$folderpath</b></li>";
   // check if has sub folders
   $files = scandir($folderpath);
 
   foreach($files as $file){
-    //  echo "$file";
     if($file != '.' && $file != '..'){
       if(is_dir($folderpath . '/' . $file)){
-        echo "<b>Subfolder</b> $file <br/>";
+        echo "<li> $file <i>Subfolder</i>";
         $file_path = $folderpath . DIRECTORY_SEPARATOR . $file;
         recurseDir($file_path);
+        echo "</li>";
       }else{
-        echo "converting $folderpath -> $file";
+        echo "<li>$folderpath -> $file</li>";
         viewSource($folderpath, $file);
-        echo "<br/>";
       }
     }
   }
+  echo "</ul>";
+  // chdir("../");
+  // echo getcwd();
 }
-
-// function loopFiles($folderpath){
-//   // stack php files
-//   $files = array();
-//   $handle = opendir($folderpath . '/');
-//   while (false !== ($file = readdir($handle))):
-//     if (stristr($file, '.php')):
-//       $files[] = $file;
-//     endif;
-//   endwhile;
-//   sort($files);
-//   chdir($folderpath);
-//   foreach ($files as $file):
-//     echo "converting $file <br>";
-//     viewSource($folderpath, $file);
-//   endforeach;
-//   chdir("../");
-// }
 
 
 /* read php files then output html */
 function viewSource($folderpath, $page){
+  echo $folderpath;
+  echo getcwd();
+  echo "<br />";
+  chdir($folderpath); // go to the dir
+  echo getcwd();
   // define the URL to load
   $url = 'http://localhost:9000/concept/'. $folderpath . '/' . $page;
   // start cURL
@@ -104,20 +73,9 @@ function viewSource($folderpath, $page){
   // important)
   curl_close($ch);
   // display the output
-  // echo $output;
+  echo "$output -> converting";
   $outputfile = str_replace(".php", "", "{$page}.html");
   file_put_contents($outputfile, $output);
+  chdir("../");
 }
-
-// function generateStaticPage($foldername, $page) {
-// 	ob_start();
-// 	$file = (string) $foldername . '/' . $page;
-// 	include_once "{$file}";
-// 	flushblocks();
-// 	$outputfile = str_replace(".php", "", "{$page}.html");
-// 	/* output to folders*/
-// 	//echo $outputfile;
-// 	file_put_contents($outputfile, ob_get_clean());
-// }
-// echo "<a href='d.php'>Delete all html files</a>";
-// ?>
+?>
