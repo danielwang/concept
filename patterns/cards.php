@@ -5,8 +5,8 @@
     <h3 class="col-sm-12">Small</h3>
     <div class="col-sm-3">
         <article class="pu-card">
-            <header>
-                <main>
+            <header class="pu-card-header">
+                <main class="pu-card-header-main">
                     <h4>
                         <a href="#_">John Smith</a>
                         <span class="label label-info">new</span>
@@ -25,7 +25,7 @@
     </div>
     <div class="col-sm-3 col-sm-offset-1">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <div class="actions">
                     <div class="checkbox checkbox-circle checkbox-success">
                         <input type="checkbox">
@@ -45,8 +45,8 @@
                         </ul>
                     </div>
                 </div>
-                <aside><img class="pu-avatar pu-avatar" src="../img/emp/emp3.png"></aside>
-                <main>
+                <aside class="pu-card-header-aside"><img class="pu-avatar pu-avatar" src="../img/emp/emp3.png"></aside>
+                <main class="pu-card-header-main">
                     <h4>
                         <a href="#_">Deborah Mason</a>
                     </h4>
@@ -66,10 +66,10 @@
     <div class="col-sm-3 col-sm-offset-1">
         <div class="pu-cards">
             <article class="pu-card">
-                <header>
-                    <aside><img class="pu-avatar" src="../img/emp/emp2.png">
+                <header class="pu-card-header">
+                    <aside class="pu-card-header-aside"><img class="pu-avatar" src="../img/emp/emp2.png">
                     </aside>
-                    <main>
+                    <main class="pu-card-header-main">
                         <h4>
                             <a href="#_">Marcus McNamara</a>
                         </h4>
@@ -83,10 +83,10 @@
                 </header>
             </article>
             <article class="pu-card">
-                <header>
-                    <aside><img class="pu-avatar" src="../img/emp/emp33.png">
+                <header class="pu-card-header">
+                    <aside class="pu-card-header-aside"><img class="pu-avatar" src="../img/emp/emp33.png">
                     </aside>
-                    <main>
+                    <main class="pu-card-header-main">
                         <h4>
                             <a href="#_">Daniel Wang</a>
                         </h4>
@@ -100,10 +100,10 @@
                 </header>
             </article>
             <article class="pu-card">
-                <header>
-                    <aside><img class="pu-avatar" src="../img/emp/emp13.png">
+                <header class="pu-card-header">
+                    <aside class="pu-card-header-aside"><img class="pu-avatar" src="../img/emp/emp13.png">
                     </aside>
-                    <main>
+                    <main class="pu-card-header-main">
                         <h4>
                             <a href="#_">Matt Birman</a>
                         </h4>
@@ -124,7 +124,7 @@
     <h3 class="col-sm-12">Large</h3>
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <h4>
                     <a href="#_">Jenifer Smith</a>
                 </h4>
@@ -140,7 +140,7 @@
                     <i class="fa fa-trophy purple"></i>
                 </p>
             </header>
-            <section>
+            <section class="pu-card-content">
                 <h6>Past roles</h6>
                 <p>
                     <b>Operations Director
@@ -164,9 +164,9 @@
     </div>
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
-                <aside><img class="pu-avatar" src="../img/emp/emp6.png"></aside>
-                <main>
+            <header class="pu-card-header">
+                <aside class="pu-card-header-aside"><img class="pu-avatar" src="../img/emp/emp6.png"></aside>
+                <main class="pu-card-header-main">
                     <h4>
                         <a href="#_">Tal Robart</a>
                     </h4>
@@ -181,7 +181,7 @@
                     </p>
                 </main>
             </header>
-            <section>
+            <section class="pu-card-content">
                 <p>
                     <i class="fa fa-fw fa-envelope"></i>
                     Tal.Robart@pageuppeople.com
@@ -201,14 +201,14 @@
                     <i class="fa fa-fw fa-user"></i>
                     Manager: John Smith</p>
             </section>
-            <footer>
+            <footer class="pu-card-footer">
                 <button class="btn btn-sm btn-primary">Action</button>
             </footer>
         </article>
     </div>
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <div class="actions">
                     <div class="checkbox checkbox-circle checkbox-success">
                         <input type="checkbox">
@@ -228,8 +228,8 @@
                         </ul>
                     </div>
                 </div>
-                <aside><img class="pu-avatar pu-avatar" src="../img/emp/emp7.png"></aside>
-                <main>
+                <aside class="pu-card-header-aside"><img class="pu-avatar pu-avatar" src="../img/emp/emp7.png"></aside>
+                <main class="pu-card-header-main">
                     <h4>
                         <a href="#_">Theo Willetts</a>
                     </h4>
@@ -244,7 +244,7 @@
                     </p>
                 </main>
             </header>
-            <section>
+            <section class="pu-card-content">
                 <ul class="nav nav-tabs nav-justified nav-line">
                     <li class="active">
                         <a href="#1a">Details</a>
@@ -272,7 +272,7 @@
                     </div>
                 </div>
             </section>
-            <footer>
+            <footer class="pu-card-footer">
                 <button class="btn btn-sm btn-primary">Action</button>
             </footer>
         </article>
@@ -282,7 +282,7 @@
 <div class="row">
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <h4>
                     <a href="#_">Business Development Executive</a>
                 </h4>
@@ -301,7 +301,7 @@
 
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <div class="actions">
                     <div class="checkbox checkbox-circle checkbox-success">
                         <input type="checkbox">
@@ -324,13 +324,13 @@
                         </ul>
                     </div>
                 </div>
-                <aside>
+                <aside class="pu-card-header-aside">
                     <a class="gray" href="#">
                         <i class="pu-icon pu-icon-team pu-icon-2x"></i>
                         <span class="app">36</span>
                     </a>
                 </aside>
-                <main>
+                <main class="pu-card-header-main">
                     <h4>
                         <a href="#_">Sales Manager</a>
                     </h4>
@@ -345,7 +345,7 @@
                     </p>
                 </main>
             </header>
-            <section>
+            <section class="pu-card-content">
                 <ul class="nav nav-tabs nav-justified nav-line">
                     <li class="active">
                         <a href="#1f">Details</a>
@@ -404,14 +404,14 @@
     <div class="col-sm-4">
         <div class="pu-cards">
             <article class="pu-card">
-                <header>
-                    <aside>
+                <header class="pu-card-header">
+                    <aside class="pu-card-header-aside">
                         <a class="gray" href="#">
                             <i class="pu-icon pu-icon-team pu-icon-2x"></i>
                             <span class="app">36</span>
                         </a>
                     </aside>
-                    <main>
+                    <main class="pu-card-header-main">
                         <h4>
                             <a href="#_">Senior HR Consultant</a>
                         </h4>
@@ -428,14 +428,14 @@
                 </header>
             </article>
             <article class="pu-card">
-                <header>
-                    <aside>
+                <header class="pu-card-header">
+                    <aside class="pu-card-header-aside">
                         <a class="gray" href="#">
                             <i class="pu-icon pu-icon-team pu-icon-2x"></i>
                             <span class="app">22</span>
                         </a>
                     </aside>
-                    <main>
+                    <main class="pu-card-header-main">
                         <h4>
                             <a href="#_">Project Manager</a>
                         </h4>
@@ -452,14 +452,14 @@
                 </header>
             </article>
             <article class="pu-card">
-                <header>
-                    <aside>
+                <header class="pu-card-header">
+                    <aside class="pu-card-header-aside">
                         <a class="gray" href="#">
                             <i class="pu-icon pu-icon-team pu-icon-2x"></i>
                             <span class="app">15</span>
                         </a>
                     </aside>
-                    <main>
+                    <main class="pu-card-header-main">
                         <h4>
                             <a href="#_">Software Developer</a>
                         </h4>
@@ -483,7 +483,7 @@
 <div class="row">
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <h4>
                     <a href="#_">Sales presentation to Aqua Corp</a>
                 </h4>
@@ -493,7 +493,7 @@
                         19 Oct 15, 03:53 PM</small>
                 </p>
             </header>
-            <section>
+            <section class="pu-card-content">
                 Delivered a sales presentation. Got great feedback about my delivery from Senior Management. #dayne gave feedback about my presentation skills. Commented I need to work on time management and that I should ...
             </section>
         </article>
@@ -501,7 +501,7 @@
 
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <h4>
                     <a href="#_">Sales presentation to Aqua Corp</a>
                 </h4>
@@ -511,13 +511,13 @@
                         19 Oct 15, 03:53 PM</small>
                 </p>
             </header>
-            <figure>
+            <figure class="pu-card-figure">
                 <img class="featured" src="../img/image.jpg" alt="">
             </figure>
-            <section>
+            <section class="pu-card-content">
                 Delivered a sales presentation. Got great feedback about my delivery from Senior Management. #dayne gave feedback about my presentation skills. Commented I need to work on time management and that I should ...
             </section>
-            <footer>
+            <footer class="pu-card-footer">
                 <p>
                     <i class="fa fa-tags"></i>
                     <span class="pu-tag pu-tag-sm pu-tag-blue">presentation</span>
@@ -530,11 +530,11 @@
     <div class="col-sm-4">
         <div class="pu-cards">
             <article class="pu-card">
-                <header>
-                    <aside>
+                <header class="pu-card-header">
+                    <aside class="pu-card-header-aside">
                         <img class="thumbnail" src="../img/image.jpg" alt="">
                     </aside>
-                    <main>
+                    <main class="pu-card-header-main">
                         <h4>
                             <a href="#_">Sales presentation to Aqua Corp</a>
                         </h4>
@@ -545,16 +545,16 @@
                         </p>
                     </main>
                 </header>
-                <footer>
+                <footer class="pu-card-footer">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </footer>
             </article>
             <article class="pu-card">
-                <header>
-                    <aside>
+                <header class="pu-card-header">
+                    <aside class="pu-card-header-aside">
                         <img class="thumbnail" src="../img/image2.jpg" alt="">
                     </aside>
-                    <main>
+                    <main class="pu-card-header-main">
                         <h4>
                             <a href="#_">Sales presentation to Aqua Corp</a>
                         </h4>
@@ -565,7 +565,7 @@
                         </p>
                     </main>
                 </header>
-                <footer>
+                <footer class="pu-card-footer">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
                 </footer>
             </article>
@@ -576,7 +576,7 @@
 <div class="row">
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <h4>
                     <a href="#_">Engaging your Colleagues</a>
                 </h4>
@@ -585,14 +585,14 @@
                     </span>
                 </p>
             </header>
-            <section>
+            <section class="pu-card-content">
                 Delivered a sales presentation. Got great feedback about my delivery from Senior Management. #dayne gave feedback about my presentation skills. Commented I need to work on time management and that I should ...
             </section>
         </article>
     </div>
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <h4>
                     <a href="#_">Engaging your Colleagues</a>
                 </h4>
@@ -601,10 +601,10 @@
                     </span>
                 </p>
             </header>
-            <section>
+            <section class="pu-card-content">
                 Delivered a sales presentation. Got great feedback about my delivery from Senior Management. #dayne gave feedback about my presentation skills. Commented I need to work on time management and that I should ...
             </section>
-            <footer>
+            <footer class="pu-card-footer">
                 <i class="pu-icon pu-icon-thumbs-up"></i>
                 15
             </footer>
@@ -612,7 +612,7 @@
     </div>
     <div class="col-sm-4">
         <article class="pu-card">
-            <header>
+            <header class="pu-card-header">
                 <div class="actions">
                     <div class="checkbox checkbox-circle checkbox-success">
                         <input type="checkbox">
@@ -640,13 +640,13 @@
                     </span>
                 </p>
             </header>
-            <figure>
+            <figure class="pu-card-figure">
                 <img class="featured" src="../img/image2.jpg" alt="">
             </figure>
-            <section>
+            <section class="pu-card-content">
                 Delivered a sales presentation. Got great feedback about my delivery from Senior Management. #dayne gave feedback about my presentation skills. Commented I need to work on time management and that I should ...
             </section>
-            <footer>
+            <footer class="pu-card-footer">
                 <i class="pu-icon pu-icon-thumbs-up"></i>
                 15
             </footer>

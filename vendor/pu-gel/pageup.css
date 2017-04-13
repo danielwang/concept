@@ -589,6 +589,16 @@ a:focus {
 .form-group {
   position: relative;
 }
+.form-group.has-info label {
+  color: #57c0e9;
+}
+.form-group.has-info .form-control {
+  border-color: #57c0e9;
+  box-shadow: none;
+}
+.form-group.has-info .help-block {
+  color: #57c0e9;
+}
 .form-group.has-success label {
   color: #76c190;
 }
@@ -667,6 +677,7 @@ a:focus {
 }
 .alert {
   padding-left: 30px;
+  position: relative;
   border-radius: 3px;
 }
 .alert .icon {
@@ -682,10 +693,14 @@ a:focus {
   color: #41905c;
 }
 .alert-success .close {
+  color: #76c190;
+  font-size: 18px;
+  background: white none repeat scroll 0 0;
   border-radius: 50%;
-  color: #999999;
-  opacity: 0.5;
-  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 .alert-success:before {
   font-family: "puicon", "FontAwesome";
@@ -708,10 +723,14 @@ a:focus {
 }
 .alert-danger .close,
 .alert-error .close {
+  color: #ee3d4b;
+  font-size: 18px;
+  background: white none repeat scroll 0 0;
   border-radius: 50%;
-  color: #999999;
-  opacity: 0.5;
-  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 .alert-danger:before,
 .alert-error:before {
@@ -733,10 +752,14 @@ a:focus {
   color: #d55f0f;
 }
 .alert-warning .close {
+  color: #f39657;
+  font-size: 18px;
+  background: white none repeat scroll 0 0;
   border-radius: 50%;
-  color: #999999;
-  opacity: 0.5;
-  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 .alert-warning:before {
   font-family: "puicon", "FontAwesome";
@@ -756,10 +779,14 @@ a:focus {
   color: #1992c1;
 }
 .alert-info .close {
+  color: #57c0e9;
+  font-size: 18px;
+  background: white none repeat scroll 0 0;
   border-radius: 50%;
-  color: #999999;
-  opacity: 0.5;
-  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 .alert-info:before {
   font-family: "puicon", "FontAwesome";
@@ -779,10 +806,14 @@ a:focus {
   color: #7a3a70;
 }
 .alert-hint .close {
+  color: #b565a9;
+  font-size: 18px;
+  background: white none repeat scroll 0 0;
   border-radius: 50%;
-  color: #999999;
-  opacity: 0.5;
-  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 .alert-hint:before {
   font-family: "puicon", "FontAwesome";
@@ -2776,6 +2807,9 @@ Variations
 .nav-tabs .dropdown-menu {
   margin-top: 0;
 }
+.nav-tabs.pu-tab {
+  border-bottom: 3px solid #257ba0;
+}
 .nav-tabs.pu-tab > li a {
   border: 1px solid #dddddd;
   background: white;
@@ -2785,10 +2819,9 @@ Variations
 .nav-tabs.pu-tab > li.active > a:focus {
   background: #257ba0;
   color: white;
-  border-color: #257ba0;
+  border-color: #257ba0 !important;
 }
 .nav-tabs.pu-tab + .tab-content {
-  border-top: 3px solid #257ba0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -2898,6 +2931,12 @@ Variations
   color: white;
   font-size: 16px;
 }
+.table.pu-table thead th a {
+  color: white;
+}
+.table.pu-table thead th a:hover {
+  color: #54b0d7;
+}
 .table.pu-table thead th:first-of-type {
   border-top-left-radius: 3px;
 }
@@ -2949,26 +2988,28 @@ table.text-center th {
   border-radius: 3px;
   margin-bottom: 30px;
 }
-.pu-box header {
+.pu-box .pu-box-header {
   padding: 15px;
   position: relative;
 }
-.pu-box header h4 {
+.pu-box .pu-box-header h4 {
   margin: 0;
 }
-.pu-box header .more {
+.pu-box .pu-box-header .more {
   position: absolute;
   right: 15px;
   top: 10px;
 }
-.pu-box header .more a {
+.pu-box .pu-box-header .more a {
   color: #58585b;
 }
-.pu-box section {
+.pu-box .pu-box-header + .pu-box-content {
   border-top: 1px dashed #dddddd;
+}
+.pu-box .pu-box-content {
   padding: 15px;
 }
-.pu-box footer {
+.pu-box .pu-box-footer {
   margin-top: 10px;
   padding: 15px;
 }
@@ -2985,57 +3026,60 @@ table.text-center th {
   border-bottom: 0 none;
   box-shadow: 0 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.1), 0 0.5em 0 -0.25em #ffffff, 0 0.5em 0.1875em -0.25em rgba(0, 0, 0, 0.2), 0 1em 0 -0.5em #ffffff, 0 1em 0.1875em -0.5em rgba(0, 0, 0, 0.1);
 }
-.pu-card header {
+.pu-card .pu-card-header {
   padding: 15px;
 }
-.pu-card header h4 {
+.pu-card .pu-card-header h4 {
   margin-top: 0;
 }
-.pu-card header aside {
+.pu-card .pu-card-header .pu-card-header-aside {
   display: table-cell;
   vertical-align: top;
 }
-.pu-card header aside .app {
+.pu-card .pu-card-header .pu-card-header-aside .app {
   font-size: 28px;
 }
-.pu-card header aside .pu-avatar {
+.pu-card .pu-card-header .pu-card-header-aside .pu-avatar {
   margin-top: 10px;
 }
-.pu-card header aside + main {
+.pu-card .pu-card-header .pu-card-header-aside + main {
   padding-left: 10px;
 }
-.pu-card header main {
+.pu-card .pu-card-header .pu-card-header-main {
   display: table-cell;
   vertical-align: top;
 }
-.pu-card header .actions {
+.pu-card .pu-card-header .actions {
   height: 15px;
   position: relative;
 }
-.pu-card header .actions .more {
+.pu-card .pu-card-header .actions .more {
   position: absolute;
   right: 0;
   top: -10px;
 }
-.pu-card header .actions .more a {
+.pu-card .pu-card-header .actions .more a {
   color: #58585b;
 }
-.pu-card header .actions .checkbox {
+.pu-card .pu-card-header .actions .checkbox {
   left: -10px;
   margin: 0;
   position: absolute;
   top: -10px;
 }
-.pu-card figure img.featured {
+.pu-card .pu-card-header-figure img.featured {
   max-width: 100%;
   margin-bottom: 15px;
 }
-.pu-card section {
+.pu-card .pu-card-header-figure + .pu-card-content {
+  border-top: 0;
+}
+.pu-card .pu-card-content {
   border-top: 1px dashed #dddddd;
   margin-top: 10px;
   padding: 15px;
 }
-.pu-card footer {
+.pu-card .pu-card-footer {
   margin-top: 10px;
   padding: 15px;
 }
@@ -3106,12 +3150,12 @@ table.text-center th {
 .panel .panel-heading .panel-title > a:before {
   float: right !important;
   font-family: FontAwesome;
-  content: "\f078";
+  content: "\f077";
   padding-right: 5px;
 }
 .panel .panel-heading .panel-title > a.collapsed:before {
   float: right !important;
-  content: "\f054";
+  content: "\f078";
 }
 .panel .panel-heading .panel-title > a:active,
 .panel .panel-heading .panel-title > a:focus,
@@ -3239,6 +3283,23 @@ table.text-center th {
 }
 .modal-dialog .modal-header {
   border-bottom: 1px solid #dddddd;
+  position: relative;
+}
+.modal-dialog .modal-header .close {
+  background: white none repeat scroll 0 0;
+  border-radius: 50%;
+  color: #777777;
+  font-size: 22px;
+  height: 24px;
+  line-height: 1;
+  margin: 0;
+  opacity: 1;
+  position: absolute;
+  right: -10px;
+  text-align: center;
+  text-shadow: 0 0 0;
+  top: -10px;
+  width: 24px;
 }
 .modal-dialog .modal-body {
   background: #f0f0f0;
@@ -3251,6 +3312,81 @@ table.text-center th {
 }
 .modal-dialog.modal-danger .modal-title {
   color: #ee3d4b;
+}
+.pu-wizard {
+  border-bottom: solid 1px #e0e0e0;
+  padding: 0 0 10px;
+}
+.pu-wizard > .pu-wizard-step {
+  padding: 0;
+  position: relative;
+}
+.pu-wizard > .pu-wizard-step .pu-wizard-stepnum {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.pu-wizard > .pu-wizard-step > .pu-wizard-dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: #57c0e9;
+  top: 45px;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+}
+.pu-wizard > .pu-wizard-step > .pu-wizard-dot:after {
+  content: ' ';
+  width: 14px;
+  height: 14px;
+  background: #257ba0;
+  border-radius: 50px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.pu-wizard > .pu-wizard-step > .progress {
+  position: relative;
+  border-radius: 0;
+  height: 8px;
+  box-shadow: none;
+  margin: 20px 0;
+  background-color: white;
+}
+.pu-wizard > .pu-wizard-step > .progress > .progress-bar {
+  width: 0;
+  box-shadow: none;
+  background: #57c0e9;
+}
+.pu-wizard > .pu-wizard-step:first-child.active > .progress > .progress-bar {
+  width: 0;
+}
+.pu-wizard > .pu-wizard-step:last-child.active > .progress > .progress-bar {
+  width: 100%;
+}
+.pu-wizard > .pu-wizard-step:first-child > .progress {
+  left: 50%;
+  width: 50%;
+}
+.pu-wizard > .pu-wizard-step:last-child > .progress {
+  width: 50%;
+}
+.pu-wizard > .pu-wizard-step.complete > .progress > .progress-bar {
+  width: 100%;
+}
+.pu-wizard > .pu-wizard-step.active > .progress > .progress-bar {
+  width: 50%;
+}
+.pu-wizard > .pu-wizard-step.disabled > .pu-wizard-dot {
+  background-color: white;
+}
+.pu-wizard > .pu-wizard-step.disabled > .pu-wizard-dot:after {
+  opacity: 0;
+}
+.pu-wizard > .pu-wizard-step.disabled a.pu-wizard-dot {
+  pointer-events: none;
 }
 /* *************************************** *\
  *   PU UI contains PageUp specific UI elements

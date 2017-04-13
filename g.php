@@ -2,7 +2,7 @@
  <?php
  compileIndex();
  function compileIndex(){
-   $url = 'http://localhost:9000/mockup2/index.php';
+   $url = 'http://localhost:9000/concept/index.php';
    $ch = curl_init();
    // tell cURL what the URL is
    curl_setopt($ch, CURLOPT_URL, $url);
@@ -27,38 +27,47 @@ for ($i = 0; $i < count($folders); $i++) {
   echo "<hr>";
 }
 
-function recurseDir($dir) {
-  if(is_dir($dir)) {
-    if($dh = opendir($dir)){
-      while($file = readdir($dh)){
-        if($file != '.' && $file != '..'){
-          if(is_dir($dir . $file)){
-            echo $dir . $file;
-            echo "since it is a directory we recurse it.";
-            recurseDir($dir . $file . '/');
-          }else{
-            echo $dir . $file;
-            echo "<br/>";
-          }
-        }
+
+
+// function recurseDir($dir) {
+//   if(is_dir($dir)) {
+//     if($dh = opendir($dir)){
+//       while($file = readdir($dh)){
+//         if($file != '.' && $file != '..'){
+//           if(is_dir($file)){
+//             echo "<b>Subfolder</b>: $dir -> $file";
+//             echo "since it is a directory we recurse it.";
+//           //  recurseDir($dir . $file . '/');
+//           }else{
+//             echo "<b>Folder</b>: $dir -> $file";
+//             echo "<br/>";
+//           }
+//         }
+//       }
+//     }
+//     closedir($dh);
+//   }
+// }
+function recurseDir($folderpath) {
+	echo "<h3>reading $folderpath folder </h3>";
+  // check if has sub folders
+  $files = scandir($folderpath);
+
+  foreach($files as $file){
+    //  echo "$file";
+    if($file != '.' && $file != '..'){
+      if(is_dir($folderpath . '/' . $file)){
+        echo "<b>Subfolder</b> $file <br/>";
+        $file_path = $folderpath . DIRECTORY_SEPARATOR . $file;
+        recurseDir($file_path);
+      }else{
+        echo "converting $folderpath -> $file";
+        viewSource($folderpath, $file);
+        echo "<br/>";
       }
     }
-    closedir($dh);
   }
 }
-// function readFolders($foldername) {
-// 	echo "<h3>reading $foldername folder </h3>";
-//   // check if has sub folders
-//   $files = scandir($foldername);
-//   foreach($files as $ff){
-//   //  echo "$file";
-//    //if($ff != '.' && $ff != '..' && is_dir($ff)){
-//       $s = is_dir($ff);
-//       echo "$ff $s <br/>";
-//       //chdir($file);
-//       //loopFiles($file);
-//     }
-// }
 
 // function loopFiles($folderpath){
 //   // stack php files
@@ -82,7 +91,7 @@ function recurseDir($dir) {
 /* read php files then output html */
 function viewSource($folderpath, $page){
   // define the URL to load
-  $url = 'http://localhost:9000/mockup2/'. $folderpath . '/' . $page;
+  $url = 'http://localhost:9000/concept/'. $folderpath . '/' . $page;
   // start cURL
   $ch = curl_init();
   // tell cURL what the URL is
