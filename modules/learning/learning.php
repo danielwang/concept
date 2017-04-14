@@ -1,4 +1,4 @@
-<?php include '../base.php'?>
+<?php include '../../base.php'?>
 <?php startblock('page')?>
 <h2>Learning Library</h2>
 <div id="learning" class="row row-gap">

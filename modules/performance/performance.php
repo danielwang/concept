@@ -1,4 +1,4 @@
-<?php include '../base.php'?>
+<?php include '../../base.php'?>
 <?php startblock('page')?>
 <h2>Simon Cariss - My Contribution and Career Plan</h2>
 <div id="performance">

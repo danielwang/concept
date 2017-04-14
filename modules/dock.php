@@ -1,4 +1,4 @@
-
+<?php include '../base.php';?>
 <link href="css/dashboard.css" rel="stylesheet" type="text/css" />
       <div id="dockbody">
         <h2>Dock page</h2>

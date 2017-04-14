@@ -1,11 +1,29 @@
  <?php
- $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
- $lastSegment = basename(parse_url($url, PHP_URL_PATH));
- $rootfolder = array("index", "index.php");
- if (in_array($lastSegment, $rootfolder)) {
- 	$resURL = '';
- } else {
- 	$resURL = '../';
+ // $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+ // $lastSegment = basename(parse_url($url, PHP_URL_PATH));
+ // $rootfolder = array("index", "index.php");
+ // if (in_array($lastSegment, $rootfolder)) {
+ // 	$resURL = '';
+ // } else {
+ // 	$resURL = '../';
+// }
+
+ $resURL = getRelativeUrl();
+
+ function getRelativeUrl(){
+   $uri = $_SERVER['REQUEST_URI'];
+   $path = trim(parse_url($uri, PHP_URL_PATH), '/');
+   $level = count(explode('/', $path));
+   var_dump($level); // 2 is index.php
+
+   if($level == 2){
+     $resURL = '';
+   } elseif ($level == 3) {
+     $resURL = '../';
+   } elseif ($level == 4) {
+     $resURL = '../../';
+   }
+   return $resURL;
  }
 
 

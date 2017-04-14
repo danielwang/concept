@@ -1,4 +1,4 @@
-<?php include '../base.php'?>
+<?php include '../../base.php'?>
 <?php startblock('page')?>
 	<h2>Recruitment Dashboard</h2>
 	<div class="row clearfix row-gap">
