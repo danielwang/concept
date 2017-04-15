@@ -20,8 +20,7 @@
 
 
 /* read php files from folders */
-//$folders = array("layouts", "modules", "patterns");
-$folders = array("modules");
+$folders = array("layouts", "modules", "patterns");
 for ($i = 0; $i < count($folders); $i++) {
   echo "<ul><li>";
   recurseDir($folders[$i]);
@@ -54,11 +53,7 @@ function recurseDir($folderpath) {
 
 /* read php files then output html */
 function viewSource($folderpath, $page){
-  echo $folderpath;
-  echo getcwd();
-  echo "<br />";
   chdir($folderpath); // go to the dir
-  echo getcwd();
   // define the URL to load
   $url = 'http://localhost:9000/concept/'. $folderpath . '/' . $page;
   // start cURL
@@ -73,10 +68,10 @@ function viewSource($folderpath, $page){
   // important)
   curl_close($ch);
   // display the output
-  echo "$output -> converting";
+  //echo "$output -> converting";
   $outputfile = str_replace(".php", "", "{$page}.html");
   file_put_contents($outputfile, $output);
-
+  // go back to the right levels
   if (substr_count($folderpath, "/") == 1){
       chdir("../../");
   } else{
