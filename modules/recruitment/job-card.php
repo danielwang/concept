@@ -10,12 +10,12 @@
                        <h3 class="panel-title">Position info</h3>
                    </div>
                    <div class="panel-body">
-                  <?php include '../components/_form.html'; ?>
+                  <?php include ("${resURL}components/_form.html"); ?>
                 </div>
               </div>
           </div>
           <div class="col-sm-4">
-              <?php include '../components/_tabs.html'; ?>
+              <?php include ("${resURL}components/_tabs.html"); ?>
           </div>
         </div>
       </div>

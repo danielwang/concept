@@ -5,7 +5,7 @@
   <div class="row row-gap">
 
     <div class="col-sm-10">
-         <?php include '../_partials/_item.php';?>
+         <?php include ("${resURL}components/_item.php");?>
          <?php for ($x = 0; $x <= 5; $x++) {?>
           <div class="item box row collaps">
             <h4>Develop sustainable reliability plans to meet standard scheme <span class="status">Current</span></h4>
@@ -34,7 +34,6 @@
           <li><a href="#">Start</a></li>
           <li class="active">
             <a href="#">My Contribution</a>
-
           </li>
           <li><a href="#">Career plan</a></li>
           <li><a href="#">Next Step</a></li>

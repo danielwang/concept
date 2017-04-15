@@ -236,8 +236,8 @@
 
 		</div>
 		<div class="col-md-4 column">
-	     	<?php //include '../../components/widgets/event.html';?>
-	     	<?php //include '../../components/widgets/task.html';?>
+	     	<?php include ("${resURL}components/widgets/event.html");?>
+	     	<?php include ("${resURL}components/widgets/task.html");?>
 		</div>
 	</div>
 <?php endblock()?>

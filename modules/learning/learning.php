@@ -3,7 +3,7 @@
 <h2>Learning Library</h2>
 <div id="learning" class="row row-gap">
       <!-- END filtering menu -->
-      <?php include '../_partials/_learning_cards.html';?>
+      <?php include ("${resURL}components/_learning_cards.html");?>
 </div>
 
 <?php endblock('page')?>

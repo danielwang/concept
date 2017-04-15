@@ -30,21 +30,17 @@
 // Reset this to compile large nesting level of less
 ini_set('xdebug.max_nesting_level', 500);
 //remove old mockup css if it exists, every time refresh page
-// $cssfile = $resURL . 'dist/css/mockup.css';
-// if (file_exists($cssfile)) {
-//  unlink($cssfile);
-// }
+$cssfile = $resURL .'dist/css/mockup.css';
+if (file_exists($cssfile)) {
+ unlink($cssfile);
+}
 
 //Compile less to output a css file
-// $lesspath = $resURL . 'build/less/mockup.less';
-// $csspath = $resURL . 'dist/css/mockup.css';
-// require "lessc.inc.php";
-// $less = new lessc;
-// $less->checkedCompile($lesspath, $csspath);
-
-
-
-
+$lesspath = $resURL . 'build/less/mockup.less';
+$csspath = $resURL . 'dist/css/mockup.css';
+require "lessc.inc.php";
+$less = new lessc;
+$less->checkedCompile($lesspath, $csspath);
 
 // Display pages as links from a folder
 function listElementsAsOptions($type) {

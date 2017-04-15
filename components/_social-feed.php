@@ -1,9 +1,3 @@
-<link href="<?php echo ($resURL) ?>css/timeline.css" rel="stylesheet" type="text/css" />
-<!--<div aria-label="Small button group" role="group" class="btn-group btn-group-sm">
-  <button class="btn btn-primary" type="button">Company</button>
-  <button class="btn btn-white" type="button">Department</button>
-  <button class="btn btn-white" type="button">Team</button>
-</div> -->
 <div class="vertical-container light-timeline" id="vertical-timeline">
  <!--   <div id="add-activity" class="small pu-bg">
         <i class="fa fa-lg fa-plus"></i>
@@ -269,4 +263,3 @@ h5{
     display: block;
 }
 </style>
-
