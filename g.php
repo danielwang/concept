@@ -76,6 +76,12 @@ function viewSource($folderpath, $page){
   echo "$output -> converting";
   $outputfile = str_replace(".php", "", "{$page}.html");
   file_put_contents($outputfile, $output);
-  chdir("../");
+
+  if (substr_count($folderpath, "/") == 1){
+      chdir("../../");
+  } else{
+      chdir("../");
+  }
+
 }
 ?>

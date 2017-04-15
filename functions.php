@@ -14,7 +14,7 @@
    $uri = $_SERVER['REQUEST_URI'];
    $path = trim(parse_url($uri, PHP_URL_PATH), '/');
    $level = count(explode('/', $path));
-   var_dump($level); // 2 is index.php
+   //var_dump($level); // 2 is index.php
 
    if($level == 2){
      $resURL = '';
